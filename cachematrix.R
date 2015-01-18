@@ -1,17 +1,16 @@
 # Programmer: Wahsabii Neanderthal, wahsabii@gmail.com
 #
-# Purpose: To gain computation efficiencies by caching potential time-consuming
-# computations such as inverting a matrix.
+# Purpose: To gain computational efficiency by caching potential time-consuming
+# computations such as inverting a matrix in this case.
 #
-# References:
-# Author: Roger D. Peng, John Hopkins Univesity
+# Author: Roger D. Peng, John Hopkins University
 # https://github.com/rdpeng/ProgrammingAssignment2
 #
 # Two primary functions:
 #
 # 1.makeCacheMatrix: This function creates a special "matrix" object that 
-# can cache its inverse outside the scope of the calling fuction using "<<-"
-# by defining anonymous functions for use in the calling environment.
+# can cache its inverse outside the scope of the calling function using "<<-"
+# by defining functions for use in the calling environment.
 #
 # 2.cacheSolve: This function computes the inverse of the special "matrix" 
 # returned by makeCacheMatrix above. If the inverse has already been calculated
@@ -22,7 +21,7 @@
 makeCacheMatrix <- function(x = matrix()) {
         # Input:an assumed invertable matrix.
         # Ouput: makeCacheMatrix creates a special "matrix", which is really a 
-        # a list x containing four anonymous functions to: 
+        # a list x containing four functions to: 
         #         1.set(); sets the value of the matrix 
         #         2.get(); gets the value of the matrix 
         #         3.setmatrixx(); sets the value of the matrix inverse
@@ -55,7 +54,7 @@ cacheSolve <- function(x, ...) {
         # function.
         m <- x$getmatrixx()
         if(!is.null(m)) {
-                message("Getting cached data")
+                message("Getting cached data ")
                 return(m)
         }
         data <- x$get()
