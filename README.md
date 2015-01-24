@@ -46,8 +46,8 @@ really a list containing a function to
         # Output is x a list of functions where some use the "<<-" 
         # operator.
         list(set = set, get = get,
-             setmatrixx = setmatrixx,
-             getmatrixx = getmatrixx)
+                setmatrixx = setmatrixx,
+                getmatrixx = getmatrixx)
 }
 
 The following function calculates the inverse of the special "matrix"
@@ -64,10 +64,11 @@ cacheSolve <- function(x, ...) {
                 return(m)
         }
         data <- x$get()
-        m <- solve(data, ...)                 
+        m <- solve(data, ...)
         x$setmatrixx(m)
         # Output is the matrix inverse
         m
 }
+
 
 
