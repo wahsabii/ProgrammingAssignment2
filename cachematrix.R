@@ -3,7 +3,7 @@
 # Purpose: To gain computational efficiency by caching potential time-consuming
 # computations such as inverting a matrix in this case.
 #
-# Author: Roger D. Peng, John Hopkins University
+# Source: Modified Dr. Roger D. Peng, John Hopkins University, functions at
 # https://github.com/rdpeng/ProgrammingAssignment2
 #
 # Two primary functions:
